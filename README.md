@@ -1,6 +1,7 @@
 # vue-todo
 
-技术栈：vue@2.5.17 + webpack: @4.26.0
+技术栈：基于最新版vue2.x + webpack4.x 后端框架采用Koa（node）
+
 git clone https://github.com/BetaCatPro/vue-todo.git
 
 npm install
