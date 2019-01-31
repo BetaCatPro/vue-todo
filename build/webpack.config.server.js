@@ -46,7 +46,7 @@ config = merge(baseConfig, {
             test: /\.styl/,
             use: [
                 extractLoader,
-                'vue-style-loader',
+                'style-loader',
                 'css-loader', {
                     loader: 'postcss-loader',
                     options: {
@@ -70,10 +70,10 @@ config = merge(baseConfig, {
     }
 })
 
-config.resolve = {
-    alias: {
-        'model': path.join(__dirname, '../client/model/server-model.js')
-    }
-}
+// config.resolve = {
+//     alias: {
+//         'model': path.join(__dirname, '../client/model/server-model.js')
+//     }
+// }
 
 module.exports = config

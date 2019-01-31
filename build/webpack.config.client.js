@@ -34,7 +34,7 @@ const devServer = {
         error: true,
     },
     hot: true, //不刷新热加载数据
-    open: false //不直接打开浏览器
+    //open: true //直接打开浏览器
 }
 
 let extractLoader = {
@@ -50,7 +50,7 @@ if (isDev) {
             rules: [{
                 test: /\.styl/,
                 use: [
-                    'vue-style-loader',
+                    'style-loader',
                     'css-loader', {
                         loader: 'postcss-loader',
                         options: {
@@ -72,11 +72,13 @@ if (isDev) {
 
     config = merge(baseConfig, {
         entry: {
+            //entry: path.join(__dirname, '../client/client-entry.js')
             app: path.join(__dirname, '../client/index.js'),
             vender: ['vue']
         },
         output: {
-            filename: '[name].[chunkhash:8].js'
+            filename: '[name].[chunkhash:8].js',
+            // publicPath: '/public/'
         },
         module: {
             rules: [{

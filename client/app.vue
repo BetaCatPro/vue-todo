@@ -15,6 +15,9 @@ import Footer from './layout/footer.jsx'
 import Todo from './views/todo/todo.vue'
 
 export default {
+    metaInfo: {
+        title: 'Jin\'s Todo App'
+    },
     // 声明组件，之后便可以使用组件标签
     components:{
         Header,
