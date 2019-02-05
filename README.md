@@ -6,6 +6,6 @@ git clone https://github.com/BetaCatPro/vue-todo.git
 
 npm install
 
-npm run dev:client //服务端运行 访问 http://localhost:8080
+npm run dev:client //服务端运行 访问 http://localhost:8000
 
 npm run build:client 项目打包
