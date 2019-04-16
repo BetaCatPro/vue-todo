@@ -4,6 +4,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const VueClientPlugin = require('vue-server-renderer/client-plugin')
 
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
@@ -24,6 +25,7 @@ const defaultPlugins = [
         filename: "index.html",
         favicon: ''
     }),
+    new VueClientPlugin()
 ]
 
 const devServer = {

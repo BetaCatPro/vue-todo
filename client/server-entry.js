@@ -1,12 +1,8 @@
-import createApp from './create-app'
+import { createApp } from './create-app'
 
 export default context => {
     return new Promise((resolve, reject) => {
-        const {
-            app,
-            router,
-            store
-        } = createApp()
+        const { app, router, store } = createApp()
 
         if (context.user) {
             store.state.user = context.user
