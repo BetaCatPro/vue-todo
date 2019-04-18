@@ -4,6 +4,7 @@
         <div id="cover"></div>
         <Header></Header>
         <Todo></Todo>
+        <notification content="test notify" />
         <Footer></Footer>
     </div>
 </template>

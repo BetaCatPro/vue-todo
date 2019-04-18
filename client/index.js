@@ -16,6 +16,9 @@ import createRouter from './config/router'
 
 const router = createRouter()
 
+import Notification from './components/notification'
+Vue.use(Notification)
+
 // 在body下创建一个根节点
 const root = document.createElement('div');
 document.body.appendChild(root);

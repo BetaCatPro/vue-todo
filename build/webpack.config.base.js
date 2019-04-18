@@ -1,21 +1,20 @@
 const path = require('path')
 const createVueLoaderOptions = require('./vue-loader.config')
 
-const isDev = process.env.NODE_ENV == 'development'
+const isDev = process.env.NODE_ENV === 'development'
 
 const config = {
     target: 'web',
-    //entry: path.join(__dirname, '../client/client-entry.js')
-    entry: path.join(__dirname, '../client/index.js'), // 输入：项目主文件（入口文件）
+    // entry: path.join(__dirname, '../client/client-entry.js'),
+    entry: path.join(__dirname, '../client/index.js'),
     output: {
-        // 输出
-        filename: 'bundle.[hash:8].js', // 输出的文件名
-        path: path.join(__dirname, '../dist'), // 输出路径
-        // path: path.join(__dirname, '../public'),
-        // publicPath: 'http://127.0.0.1:8000/public/'
+        filename: 'bundle.[hash:8].js',
+        // server:client
+        path: path.join(__dirname, '../dist'),
+        // publicPath: 'http://127.0.0.1/8000/public/'
     },
-    module: { // 配置加载资源
-        rules: [ // 规则
+    module: {
+        rules: [
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
